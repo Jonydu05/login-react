@@ -1,0 +1,105 @@
+// ========================
+// INPUT
+// ========================
+
+.input {
+  background: var(--gray-200);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.5rem;
+  padding: 0.75rem;
+  border-radius: 4px;
+  height: 3rem;
+  color: var(--primary-500);
+  outline: 2px solid transparent;
+  transition: outline-color 0.25s ease-in-out;
+  user-select: none;
+}
+
+.input:focus,
+.input:focus-within {
+  outline-color: var(--primary-500);
+}
+
+.input input {
+  all: unset;
+  flex: 1 1 auto;
+  font: 300 0.875rem/1.625rem var(--font-sans-serif);
+  color: var(--gray-800);
+  width: 100%;
+  height: 100%;
+}
+
+// ========================
+// TEXTAREA
+// ========================
+
+.textarea {
+  all: unset;
+  background: var(--gray-200);
+  padding: 0.75rem;
+  border-radius: 4px;
+  min-height: 8.875rem;
+  outline: 2px solid transparent;
+  transition: outline-color 0.25s ease-in-out;
+  font: 300 0.875rem/1.625rem var(--font-sans-serif);
+  color: var(--gray-800);
+  white-space: pre-wrap;
+}
+
+.textarea:focus,
+.textarea:focus-within {
+  outline-color: var(--primary-500);
+}
+
+// ========================
+// CHECKBOX
+// ========================
+
+.checkbox-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 4px;
+  position: relative;
+
+  input[type='checkbox'] {
+    position: absolute;
+    z-index: -1;
+    width: 0;
+    height: 0;
+    appearance: none;
+    opacity: 0;
+  }
+
+  .checkbox {
+    width: 18px;
+    height: 18px;
+    border-radius: 2px;
+    border: 2px solid var(--gray-800);
+    color: var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.15s cubic-bezier(0.075, 0.82, 0.165, 1);
+    background: transparent;
+    user-select: none;
+
+    &.disabled {
+      opacity: 38%;
+      cursor: default;
+      background-color: transparent;
+    }
+
+    &.checked {
+      border-color: transparent;
+      background-color: var(--primary-500);
+    }
+
+    &.disabled.checked {
+      filter: grayscale(1);
+    }
+  }
+}

@@ -1,0 +1,255 @@
+.card,
+.card--skeleton {
+  background: var(--gray-50);
+  border-radius: 1rem;
+  padding: 2rem 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+  text-align: left;
+  width: auto;
+  transition: box-shadow 0.25s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+
+.card {
+  cursor: pointer;
+}
+
+.carousel-cards .card,
+.carousel-cards .card--skeleton,
+.search-page .card:hover {
+  box-shadow: 0 1rem 2.125rem 0 #0000001a;
+}
+
+.card img {
+  width: 100%;
+  height: 25vh;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 3.4px 3.4px 0 0;
+  background: linear-gradient(270deg, #f2f2f2 18.75%, #e5e7eb 179.69%);
+}
+
+.card header > p {
+  font: 400 0.625rem/0.688rem var(--font-sans-serif);
+  color: var(--black);
+  margin-bottom: 8px;
+}
+
+.card header > section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.card div:has(.chip) {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.card header h4 {
+  font: 500 1.5rem/1.75rem var(--font-sans-serif);
+  color: var(--primary-500);
+}
+
+.card__content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.card__content h5 {
+  font: 400 1.25rem/1.5rem var(--font-sans-serif);
+}
+
+.card__content div:not(.card__info-wrapper) {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.card__address {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--primary-500);
+}
+
+.card__address p {
+  font:
+    300 1rem/1.25rem 'Roboto',
+    sans-serif;
+  color: var(--gray-500);
+}
+
+.card__info-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.card__info {
+  display: flex;
+  flex-direction: column;
+  padding: 0.75rem 0.875rem 0.75rem 0.875rem;
+  gap: 0.5rem;
+  border-radius: 4px;
+  background: var(--gray-25);
+  border: 1px solid var(--gray-300);
+
+  p {
+    font: 300 0.875rem/1rem var(--font-sans-serif);
+  }
+
+  .icon {
+    font-size: 18px;
+  }
+}
+
+// ==============================
+// Card Skeleton
+// ==============================
+
+.cards__loading {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  gap: 24px;
+  align-items: center;
+  margin-top: -8px;
+  padding: 40px;
+}
+
+.card--skeleton,
+.card--skeleton__img,
+.card--skeleton__info,
+.card--skeleton__info--address,
+.card--skeleton__action {
+  animation: loading 1.5s infinite alternate linear;
+  background-size: 100% 200%;
+}
+
+.card--skeleton {
+  width: calc(100% / 3 - 1rem);
+  box-shadow: none;
+  background: linear-gradient(270deg, #f9fafb 18.75%, #e8e8e8 179.69%);
+  gap: 1rem;
+}
+
+.card--skeleton__img,
+.card--skeleton__info,
+.card--skeleton__info--address,
+.card--skeleton__action {
+  background: linear-gradient(270deg, #f2f2f2 18.75%, #e5e7eb 179.69%);
+  border-radius: 8px;
+}
+
+@keyframes loading {
+  from {
+    background-position: -100% 0;
+  }
+
+  to {
+    background-position: 100% 0;
+  }
+}
+
+.card--skeleton__img,
+.card--skeleton__info,
+.card--skeleton__action {
+  width: 100%;
+}
+
+.card--skeleton__info,
+.card--skeleton__info--address {
+  height: 3vh;
+}
+
+.card--skeleton__img {
+  height: 25vh;
+  margin-bottom: 6px;
+}
+
+.card--skeleton__info--address {
+  width: 50%;
+  margin-bottom: 42px;
+}
+
+.card--skeleton__action {
+  height: 7vh;
+}
+
+.C-property-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  position: relative;
+
+  .tooltip {
+    position: absolute;
+    bottom: -32px;
+    left: 0;
+    width: fit-content;
+    padding: 4px 8px;
+    border-radius: 4px;
+    background: var(--gray-800);
+    white-space: nowrap;
+    visibility: hidden;
+    display: block;
+    opacity: 0;
+    transition: all 0.25s ease-in-out;
+  }
+}
+
+.tooltip p {
+  font: var(--body-small);
+  color: var(--white);
+}
+
+.C-property-info:hover .tooltip {
+  opacity: 1;
+  visibility: visible;
+}
+
+// =====================
+// CARD PROPOSAL
+// =====================
+
+.card-proposal {
+  border-radius: 5px;
+  border: 1px solid var(--gray-200);
+  padding: 24px;
+  background: var(--gray-25);
+  z-index: calc(var(--z-index-modal) + 2);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  h6 {
+    font: 300 1.5rem/2rem var(--font-sans-serif);
+  }
+
+  button {
+    margin-top: 6px;
+    height: 40px;
+  }
+}
+
+.card-proposal,
+.card-proposal form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.card-proposal__btn-wrapper {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  justify-content: flex-start;
+}

@@ -1,0 +1,80 @@
+.teste form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  padding: 2.5rem;
+  border: 1px solid var(--gray-300);
+  border-radius: 8px;
+  background: var(--gray-25);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.25s ease-in-out;
+  position: relative;
+  min-width: 30vw;
+
+  h3 {
+    position: absolute;
+    top: -3rem;
+    left: -1.25rem;
+    font: 700 1.6rem/1 'Fira Code';
+    color: var(--primary-500);
+  }
+}
+
+.filter-main {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2.5rem;
+  border-radius: 1rem;
+  padding: 3rem 2rem;
+  background-color: var(--gray-50);
+  box-shadow: 0px 16.97px 34.75px 0px #0000001a;
+  width: 66vw;
+  position: relative;
+  padding-bottom: calc(3rem + 88px);
+
+  h2 {
+    font: 300 2rem/1 var(--font-sans-serif);
+    letter-spacing: -0.02em;
+    color: var(--primary-500);
+    width: 100%;
+  }
+
+  strong {
+    font-weight: 400;
+  }
+
+  form {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(4, calc(25% - 0.75rem));
+    width: 100%;
+  }
+
+  .state-city {
+    display: flex;
+    gap: 16px;
+
+    > div:first-child {
+      flex: 1 1 110px;
+    }
+
+    > div:last-child {
+      flex: 2 1 0;
+    }
+  }
+
+  .address-filter {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    gap: 16px;
+  }
+
+  .button.button-filter-main {
+    height: 48px;
+    position: absolute;
+    right: 2rem;
+    bottom: 3rem;
+  }
+}

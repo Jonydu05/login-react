@@ -1,0 +1,42 @@
+:root {
+  --swiper-pagination-color: var(--primary-500);
+  --swiper-pagination-bullet-inactive-color: var(--gray-300);
+  --swiper-pagination-bullet-inactive-opacity: 1;
+  --swiper-pagination-bullet-opacity: 1;
+  --swiper-pagination-bullet-size: 16px;
+  --swiper-pagination-bullet-width: 16px;
+  --swiper-pagination-bullet-height: 16px;
+  --swiper-pagination-bottom: 0px;
+
+  --swiper-navigation-size: 44px;
+  --swiper-navigation-top-offset: 50%;
+  --swiper-navigation-sides-offset: 24px;
+  --swiper-navigation-color: var(--gray-50);
+}
+
+.about-us .button {
+  margin-right: auto;
+}
+
+.filter-button .icon {
+  font-size: 18px;
+}
+
+.footer article:nth-child(4) {
+  .icon {
+    font-size: 22px;
+  }
+  svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.breadcumb .icon,
+.input .icon {
+  font-size: 22px;
+}
+
+.checkbox .icon {
+  font-size: 18px;
+}

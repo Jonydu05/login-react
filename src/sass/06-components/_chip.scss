@@ -1,0 +1,14 @@
+.chip {
+  border-radius: 14px;
+  padding: 0.5rem 0.625rem;
+  display: flex;
+  gap: 0.625rem;
+  align-items: center;
+  font: 500 0.938rem/1.125rem var(--font-sans-serif);
+  letter-spacing: -0.02em;
+}
+
+.chip.--success {
+  background-color: #e5fcda;
+  color: #239a3c;
+}
